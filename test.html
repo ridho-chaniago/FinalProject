@@ -1,0 +1,34 @@
+<!-- Tombol dan Keranjang -->
+<button id="add-to-cart-button" onclick="addToCart()">
+  Tambahkan ke Keranjang
+</button>
+<div id="cart"></div>
+
+<!-- JavaScript -->
+<script>
+  // Array keranjang untuk menyimpan produk yang ditambahkan
+  let cart = [];
+
+  // Fungsi untuk menambahkan produk ke keranjang
+  function addToCart() {
+    // Simpan produk ke dalam array cart
+    cart.push(1);
+
+    // Perbarui tampilan keranjang
+    displayCart();
+  }
+
+  // Fungsi untuk menampilkan isi keranjang
+  function displayCart() {
+    const cartElement = document.getElementById("cart");
+    // Bersihkan isi keranjang sebelum menambahkan ulang
+    // cartElement.innerHTML = "";
+
+    // Tambahkan setiap produk ke dalam elemen keranjang
+    cart.forEach((product) => {
+      const productElement = document.createElement("div");
+      productElement.textContent = product;
+      cartElement.appendChild(productElement);
+    });
+  }
+</script>
