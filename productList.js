@@ -1,6 +1,6 @@
 const products = [
   {
-    image: "./asset/pngfuel-1.png",
+    image: "./asset/productPicture/apple.png",
     name: "Red Apple",
     weight: "1.00Kg",
     price: "$4.99",
