@@ -1,8 +1,5 @@
 import products from "./productList.js";
 
-const consolee = () => {
-  console.log("klik");
-};
 function inject() {
   products.forEach((product) => {
     function addProductToHome() {
@@ -11,7 +8,7 @@ function inject() {
       createProduct.className =
         " flex flex-col justify-beetwen p-4  h-64 border-[1px] border-[#E2E2E2] rounded-2xl hover:scale-105 hover:border-green-800";
       createProduct.innerHTML = `
-                        <button onclick="consolee()" class="flex h-[55%] mx-auto my-auto ">
+                        <button class="flex h-[55%] mx-auto my-auto ">
                         <!-- <button class=" max-h-full mx-auto my-auto flex"> -->
                         <img class="max-h-full mx-auto my-auto"  src="${product.image}" alt="Product Picture"/>
                         </button>
