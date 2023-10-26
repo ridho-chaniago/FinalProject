@@ -10,7 +10,6 @@ function inject() {
       createProduct.innerHTML = `
                         <button class="flex h-[55%] mx-auto my-auto
                          ">
-                        <!-- <button class=" max-h-full mx-auto my-auto flex"> -->
                         <img class="max-h-full mx-auto my-auto"  src="${product.image}" alt="Product Picture"/>
                         </button>
                     </div>
