@@ -79,3 +79,27 @@ console.log(btnAddToCart);
 for (let i = 0; i < btnAddToCart.length; i++) {
   btnAddToCart[i].addEventListener("click", qountChart);
 }
+
+// page profile
+const btnAccount = document.getElementById("btnAccount");
+const btnShop = document.getElementById("btnShop");
+
+btnAccount.addEventListener("click", () => {
+  document.getElementById("account").classList.remove("hidden");
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("logo").classList.add("hidden");
+  document.getElementById("namalogo").classList.add("hidden");
+});
+btnShop.addEventListener("click", () => {
+  document.getElementById("account").classList.add("hidden");
+  document.getElementById("home").classList.remove("hidden");
+  document.getElementById("logo").classList.remove("hidden");
+  document.getElementById("namalogo").classList.remove("hidden");
+});
+
+// log out
+const btnLogOut = document.getElementById("btnLogOut");
+btnLogOut.addEventListener("click", () => {
+  localStorage.removeItem("cartItems");
+  window.location.href = "index.html";
+});

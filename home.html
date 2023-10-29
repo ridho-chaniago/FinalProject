@@ -18,6 +18,7 @@
         style="box-shadow: -12px 0px 37px 0px rgba(230, 235, 243, 0.5)"
       >
         <div
+          id="logo"
           class="mt-12 md:flex md:justify-center md:items-center md:gap-3 md:mx-auto md:my-auto md:w-[20%]"
         >
           <svg
@@ -58,7 +59,8 @@
           </div>
         </div>
         <div
-          class="bg-[#F2F3F2] mx-6 h-[52px] w-auto my-[20px] rounded-2xl flex gap-3 px-9 items-center md:m-0 md:w-[40%]"
+          id="namalogo"
+          class="bg-[#F2F3F2] mx-6 h-[52px] w-auto my-[20px] rounded-2xl flex md:flex gap-3 px-9 items-center md:m-0 md:w-[40%]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +84,7 @@
           <nav class="bg-white rounded-tr-[15px] rounded-tl-[15px] md:w-[100%]">
             <ul class="items-center flex justify-around h-[70px]">
               <li class="hover:scale-125">
-                <a href="#">
+                <button id="btnShop">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -98,8 +100,8 @@
                       stroke-width="0.1"
                     />
                   </svg>
-                  Shop</a
-                >
+                  Shop
+                </button>
               </li>
               <li class="hover:scale-125">
                 <a href="#">
@@ -180,7 +182,7 @@
                 </a>
               </li>
               <li class="hover:scale-125">
-                <a href="./account.html">
+                <button id="btnAccount">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -195,19 +197,18 @@
                     />
                   </svg>
                   Account
-                </a>
+                </button>
               </li>
             </ul>
           </nav>
         </div>
       </div>
+    </header>
 
+    <main id="home" class="">
       <div class="w-[100%] pt-0 pb-[30px] px-6">
         <img class="max-w-full mx-auto" src="./asset/banner.jpeg" alt="" />
       </div>
-    </header>
-
-    <main>
       <!-- Exclusive offer -->
       <section class="px-6 mb-32">
         <div>
@@ -221,6 +222,95 @@
             id="cards"
           ></div>
         </div>
+      </section>
+    </main>
+
+    <main id="account" class="mt-20 mb-20 md:mt-0 hidden">
+      <section>
+        <div class="flex gap-8 items-center mb-6 px-16">
+          <img
+            class="w-32 rounded-full"
+            src="./asset/svg/userprof.png"
+            alt=""
+          />
+          <div>
+            <h1 class="text-[32px] font-bold">Afsar Hossen</h1>
+            <p class="text-gray-500">Imsuvo97@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="flex px-7 py-7 justify-between border-y-2">
+          <div class="flex gap-4" s>
+            <img class="w-7" src="./asset/svg/Ordersicon.png" alt="" />
+            <p class="font-bold text-[18px]">Orders</p>
+          </div>
+          <button><img src="./asset/svg/backarrow.png" alt="" /></button>
+        </div>
+
+        <div class="flex px-7 py-7 justify-between border-b-2">
+          <div class="flex gap-4" s>
+            <img class="w-7" src="./asset/svg/id.png" alt="" />
+            <p class="font-bold text-[18px]">My Details</p>
+          </div>
+          <button><img src="./asset/svg/backarrow.png" alt="" /></button>
+        </div>
+
+        <div class="flex px-7 py-7 justify-between border-b-2">
+          <div class="flex gap-4" s>
+            <img class="w-7" src="./asset/svg/map.png" alt="" />
+            <p class="font-bold text-[18px]">Delivery Address</p>
+          </div>
+          <button><img src="./asset/svg/backarrow.png" alt="" /></button>
+        </div>
+
+        <div class="flex px-7 py-7 justify-between border-b-2">
+          <div class="flex gap-4" s>
+            <img class="w-7" src="./asset/svg/payment.png" alt="" />
+            <p class="font-bold text-[18px]">Payment Method</p>
+          </div>
+          <button><img src="./asset/svg/backarrow.png" alt="" /></button>
+        </div>
+
+        <div class="flex px-7 py-7 justify-between border-b-2">
+          <div class="flex gap-4" s>
+            <img class="w-7" src="./asset/svg/promo.png" alt="" />
+            <p class="font-bold text-[18px]">Promo Card</p>
+          </div>
+          <button><img src="./asset/svg/backarrow.png" alt="" /></button>
+        </div>
+
+        <div class="flex px-7 py-7 justify-between border-b-2">
+          <div class="flex gap-4" s>
+            <img class="w-7" src="./asset/svg/notif.png" alt="" />
+            <p class="font-bold text-[18px]">Notification</p>
+          </div>
+          <button><img src="./asset/svg/backarrow.png" alt="" /></button>
+        </div>
+
+        <div class="flex px-7 py-7 justify-between border-b-2">
+          <div class="flex gap-4" s>
+            <img class="w-7" src="./asset/svg/help.png" alt="" />
+            <p class="font-bold text-[18px]">Help</p>
+          </div>
+          <button><img src="./asset/svg/backarrow.png" alt="" /></button>
+        </div>
+
+        <div class="flex px-7 py-7 justify-between border-b-2">
+          <div class="flex gap-4" s>
+            <img class="w-7" src="./asset/svg/about.png" alt="" />
+            <p class="font-bold text-[18px]">About</p>
+          </div>
+          <button><img src="./asset/svg/backarrow.png" alt="" /></button>
+        </div>
+      </section>
+      <section class="px-6 mt-28">
+        <button
+          id="btnLogOut"
+          class="bg-[#F2F3F2] w-full h-16 rounded-3xl flex items-center justify-center gap-4"
+        >
+          <img src="./asset/svg/logout.png" alt="" />
+          <h2 class="text-[18px] font-bold text-green-500">Log Out</h2>
+        </button>
       </section>
     </main>
 
