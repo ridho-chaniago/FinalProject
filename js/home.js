@@ -43,6 +43,7 @@ function initApp() {
 function addToCart(event, product, cartItems) {
   const productName = product.name;
   const productPrice = product.price;
+  const productImage = product.image;
 
   const cartItem = {
     name: productName,
