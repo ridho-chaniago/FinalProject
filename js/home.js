@@ -47,6 +47,7 @@ function addToCart(event, product, cartItems) {
   const cartItem = {
     name: productName,
     price: productPrice,
+    image: productImage,
   };
 
   cartItems.push(cartItem);
@@ -62,7 +63,7 @@ initApp();
 // penambahan angka di logo keranjang
 
 let countChart = 0;
-function addToChart() {
+function qountChart() {
   countChart++;
 
   const chartLogo = document.getElementById("chartLogo");
@@ -75,5 +76,5 @@ function addToChart() {
 let btnAddToCart = document.getElementsByClassName("btnAddToCart");
 console.log(btnAddToCart);
 for (let i = 0; i < btnAddToCart.length; i++) {
-  btnAddToCart[i].addEventListener("click", addToChart);
+  btnAddToCart[i].addEventListener("click", qountChart);
 }
