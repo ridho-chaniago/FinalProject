@@ -5,6 +5,9 @@ const cartItems = [];
 function initApp() {
   const idCard = document.getElementById("cards");
 
+  // Inisialisasi keranjang belanja dari localStorage (jika ada)
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
   products.forEach((product) => {
     const createProduct = document.createElement("article");
     createProduct.className =
@@ -32,12 +35,12 @@ function initApp() {
     createProduct
       .querySelector(".btnAddToCart")
       .addEventListener("click", (event) => {
-        addToCart(event, product);
+        addToCart(event, product, cartItems);
       });
   });
 }
 
-function addToCart(event, product) {
+function addToCart(event, product, cartItems) {
   const productName = product.name;
   const productPrice = product.price;
 
@@ -47,6 +50,9 @@ function addToCart(event, product) {
   };
 
   cartItems.push(cartItem);
+
+  // Simpan item ke keranjang belanja
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
   console.log(`${productName} ditambahkan ke keranjang belanja.`);
 }
@@ -66,17 +72,8 @@ function addToChart() {
   textChartLogo.innerHTML = `${countChart}`;
   chartLogo.appendChild(textChartLogo);
 }
-let btnAddToChart = document.getElementsByClassName("btnAddToChart");
-console.log(btnAddToChart);
-for (let i = 0; i < btnAddToChart.length; i++) {
-  btnAddToChart[i].addEventListener("click", addToChart);
-}
-
-// Menghitung jumlah angka genap dari 1 hingga 10
-let sum = 0;
-for (let i = 1; i <= 10; i++) {
-  if (i % 2 === 0) {
-    sum += i;
-    console.log(i);
-  }
+let btnAddToCart = document.getElementsByClassName("btnAddToCart");
+console.log(btnAddToCart);
+for (let i = 0; i < btnAddToCart.length; i++) {
+  btnAddToCart[i].addEventListener("click", addToChart);
 }
